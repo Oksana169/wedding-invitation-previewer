@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: rgb(22, 22, 22);
+    --white: #ffffff; 
+    --gray: rgb(49,57,71);
+  }
+  
+body {
+    margin: 0;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+/* Main Grid */
+.main-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'inputs templates';
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 5rem 1fr;
+
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+}
+
+.inputs {
+    grid-area: inputs;
+    text-align: center;
+}
+
+.buttons {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 1.25rem;
+    color: var(--white);
+}
+
+.inputs p {
+    display: block;
+    font-weight: bold;
+    text-align: center;  
+}
+
+.input-border[type=text]{
+    padding: 5px 5px;
+    background-color: var(--black);
+    color: var(--white);
+    height: 40px;
+    width: 260px;
+    box-sizing: border-box;
+    border: 3px solid var(--white);
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   outline: none;
+}
+
+.input-border[type=text]:focus {
+    border: 3px solid var(--gray);
+  }
+
+#date-input[type=date] {
+    padding: 5px 5px;
+    background-color: var(--black);
+    color: var(--white);
+    height: 40px;
+    width: 260px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   outline: none;
+   text-align: left;
+} 
+
+#date-input[type=date]:focus {
+    border: 3px solid var(--gray);
+  }
+
+#date-input[type=date]::-webkit-calendar-picker-indicator {
+    background-color: var(--white);
+  }
+
+/* Grid container */
+#grid-container {
+    grid-area: templates;
+    display: grid;
+    grid-template-rows: 23% 15% 5% 3% 17% 4% 8% 25%;
+    background-image: url(./Images/Flowers.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    margin: 0px 20px;    
+}
+
+#letters-output {
+    font-family: "Ubuntu"; 
+    font-size: 3.25rem;
+    grid-row: 2;
+    align-self: flex-start;
+}
+
+#phrase-output {
+    font-family: "Open Sans"; 
+    font-size: 1.25rem;
+    grid-row: 3;
+}
+#names-output {
+    font-family: "Ubuntu"; 
+    font-size: 2rem;
+    grid-row: 4;  
+}
+#last-name-output {
+    font-family: "Ubuntu"; 
+    font-size: 3.25rem;
+    grid-row: 5;
+}
+#date-output {
+    font-family: "Helvetica Neue"; 
+    font-size: 1.5rem;
+    grid-row: 6;
+}
+
+#location-output {
+    font-family: "Helvetica Neue"; 
+    font-size: 1.5rem;
+    grid-row: 7;
+}
+
+
+
+
